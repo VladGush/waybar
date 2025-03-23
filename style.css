@@ -1,0 +1,235 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /*font-size: 18px;*/
+    border: none;
+    border-radius: 0;
+    min-height: 30px;
+}
+
+ window#waybar {
+    background: transparent;
+    
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+.modules-left, .modules-center, .modules-right {
+    background-color: rgb(169, 10, 10); /* Красный фон */
+    color: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    opacity: 1;
+    padding:2px 20px 2px 20px;
+    /*border: 1px solid black; Черная рамка */
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    background-color: #ebf2f7;
+    color: red;
+}
+
+#workspaces button.urgent {
+    background-color: #fcf9f9;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #070606;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+
+#clock {
+    /*background-color: #a51919;*/
+    padding-right: 15px;
+}
+
+#battery {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+#battery.charging, #battery.plugged {
+    background-color: #ffffff;
+    color:#ff0000
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #ff0000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    /*background-color: #a51919;*/
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #f53c3c;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+#label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    padding-right: 15px;
+}
+
+/***MEMORY***/
+#memory {
+    
+}
+
+
+#backlight {
+    padding-right: 15px;
+}
+
+#network {
+    
+}
+
+#network.disconnected {
+    
+}
+
+#pulseaudio {
+    
+}
+
+#pulseaudio.muted {
+    background-color: #ffffff;
+    color: #ff0000;
+}
+
+#wireplumber {
+    color: #000000;
+}
+
+#wireplumber.muted {
+    
+}
+
+#temperature {
+    padding-right: 15px;
+    
+}
+
+#temperature.critical {
+    background-color: #ffffff;
+    color: red;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #ff0000;
+    }
+}
+
+
+#language {
+    padding: 0 5px;
+    margin: 0 4px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    padding: 0 0px;
+    margin: 0 4px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgb(255, 255, 255);
+    color: red;
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#bluetooth {
+    padding: 0 5px;
+}
+
+#language {
+
+}
+
+#custom-notification {
+    font-family: "NotoSansMono Nerd Font";
+  }
